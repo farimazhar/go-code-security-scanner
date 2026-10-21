@@ -1,19 +1,18 @@
-# GoSentry - Go Code Security Scanner (Pure Go)
+# GoSentry - Go Code Security Scanner
 
-A lightweight Go API that scans Go code for security vulnerabilities. Built for Vercel Serverless.
+A pure Go API that scans Go code for security vulnerabilities.
 
-**Live API:** `https://go-ai-guard.vercel.app/api/scan`
-
-## What it does
-- Detects SQL Injection (`db.Query("..." + id)`)
-- Detects Hardcoded Secrets
-- Detects Goroutine leak risk
+Features:
+- SQL Injection detection
+- Hardcoded secrets detection
 - Ignores comments to avoid fake results
+- Pure Go, zero dependencies
 
-## How to use
+How to use:
+POST /api/scan with { "code": "your go code" }
 
-**POST /api/scan**
-```bash
-curl -X POST https://go-ai-guard.vercel.app/api/scan \
--H "Content-Type: application/json" \
--d '{"code": "func GetUser(id string) { db.Query(\"SELECT * FROM users WHERE id = \"+id) }"}'
+Response:
+{ "score": 65, "status": "RISKY", "issues": ["CRITICAL: SQL Injection"] }
+
+Structure: go.mod, api/scan.go, README.md
+API-only project, no frontend.
