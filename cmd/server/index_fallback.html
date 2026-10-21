@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GoSentry - Go Code Security Scanner & Analyzer</title>
-  
+
   <!-- Modern Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
   <!-- Master Application Theme -->
-  <link rel="stylesheet" href="/css/app_theme/theme.css">
+  <link rel="stylesheet" href="/css/app_theme/theme.css?v=3.0">
 </head>
+
 <body>
   <!-- Header -->
   <header class="app-header">
@@ -57,7 +61,8 @@
 
       <!-- Editor (Drag & Drop Zone) -->
       <div class="editor-wrapper" id="editorWrapper">
-        <textarea id="codeEditor" class="code-editor" spellcheck="false" placeholder="// Paste Go code or drag & drop a .go file here..."></textarea>
+        <textarea id="codeEditor" class="code-editor" spellcheck="false"
+          placeholder="// Paste Go code or drag & drop a .go file here..."></textarea>
       </div>
 
       <!-- Actions -->
@@ -82,7 +87,8 @@
         <div class="score-dial">
           <div class="score-number" id="scoreNum">--</div>
           <div class="score-meta">
-            <span style="font-size: var(--text-xs); color: var(--text-muted); text-transform: uppercase;">Security Score</span>
+            <span style="font-size: var(--text-xs); color: var(--text-muted); text-transform: uppercase;">Security
+              Score</span>
             <span class="status-badge status-safe" id="statusBadge">Ready</span>
           </div>
         </div>
@@ -136,6 +142,7 @@
   </main>
 
   <!-- Modular ES6 Application Entrypoint -->
-  <script type="module" src="/js/main.js"></script>
+  <script type="module" src="/js/main.js?v=3.0"></script>
 </body>
+
 </html>
