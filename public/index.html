@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoSentry - Go Code Security Scanner & Analyzer</title>
+  
+  <!-- Modern Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Master Application Theme -->
+  <link rel="stylesheet" href="/css/app_theme/theme.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="app-header">
+    <div class="brand">
+      <div class="brand-icon">🛡️</div>
+      <div>
+        <h1>GoSentry</h1>
+      </div>
+      <span class="badge-capsule" id="ruleCountBadge">14 SAST Rules</span>
+    </div>
+    <div>
+      <span style="font-size: var(--text-sm); color: var(--text-muted);">Pure Go • Zero Dependencies</span>
+    </div>
+  </header>
+
+  <!-- Main Grid -->
+  <main class="app-main">
+    <!-- Feature 1: Code Scanner Input -->
+    <section class="panel">
+      <div class="panel-header">
+        <div class="panel-title">
+          <span>⚡ Source Code Input</span>
+        </div>
+        <div class="file-toolbar">
+          <span class="file-badge" id="currentFileBadge"></span>
+          <button class="btn-icon" id="openFileBtn" title="Upload local .go file">
+            <span>📂 Open File</span>
+          </button>
+          <input type="file" id="fileInput" accept=".go,.txt" style="display: none;">
+        </div>
+      </div>
+
+      <!-- Presets -->
+      <div class="preset-pills">
+        <button class="pill-btn" data-preset="sqli">SQL Injection</button>
+        <button class="pill-btn" data-preset="cmd">Command Injection</button>
+        <button class="pill-btn" data-preset="tls">Insecure TLS</button>
+        <button class="pill-btn" data-preset="secrets">Hardcoded & Cloud Keys</button>
+        <button class="pill-btn" data-preset="path">Path Traversal</button>
+        <button class="pill-btn" data-preset="safe">Clean / Safe Code</button>
+      </div>
+
+      <!-- Editor (Drag & Drop Zone) -->
+      <div class="editor-wrapper" id="editorWrapper">
+        <textarea id="codeEditor" class="code-editor" spellcheck="false" placeholder="// Paste Go code or drag & drop a .go file here..."></textarea>
+      </div>
+
+      <!-- Actions -->
+      <div class="action-bar">
+        <button class="btn btn-secondary" id="clearBtn">Clear</button>
+        <button class="btn btn-primary" id="scanBtn">
+          <span>Scan Code Now</span> 🔍
+        </button>
+      </div>
+    </section>
+
+    <!-- Feature 2: Diagnostics & Findings -->
+    <section class="panel">
+      <div class="panel-header">
+        <div class="panel-title">
+          <span>📊 Security Diagnostics</span>
+        </div>
+      </div>
+
+      <!-- Score Card -->
+      <div class="score-card">
+        <div class="score-dial">
+          <div class="score-number" id="scoreNum">--</div>
+          <div class="score-meta">
+            <span style="font-size: var(--text-xs); color: var(--text-muted); text-transform: uppercase;">Security Score</span>
+            <span class="status-badge status-safe" id="statusBadge">Ready</span>
+          </div>
+        </div>
+        <div style="text-align: right; font-size: var(--text-xs); color: var(--text-muted);">
+          <span id="linesCount">0</span> lines scanned
+        </div>
+      </div>
+
+      <!-- Stats Breakdown -->
+      <div class="stats-row">
+        <div class="stat-chip">
+          <span class="val" id="critVal" style="color: var(--critical);">0</span>
+          <span class="lbl">Critical</span>
+        </div>
+        <div class="stat-chip">
+          <span class="val" id="highVal" style="color: var(--high);">0</span>
+          <span class="lbl">High</span>
+        </div>
+        <div class="stat-chip">
+          <span class="val" id="medVal" style="color: var(--medium);">0</span>
+          <span class="lbl">Medium</span>
+        </div>
+        <div class="stat-chip">
+          <span class="val" id="totalVal" style="color: #fff;">0</span>
+          <span class="lbl">Total Issues</span>
+        </div>
+      </div>
+
+      <!-- Findings List -->
+      <div class="findings-list" id="findingsContainer">
+        <div class="empty-state">
+          <span class="empty-state-icon">🛡️</span>
+          <p>Paste Go code and click <strong>Scan Code Now</strong> to inspect for security vulnerabilities.</p>
+        </div>
+      </div>
+
+      <!-- Export Bar -->
+      <div class="export-bar" id="exportBar">
+        <span style="font-size: var(--text-xs); color: var(--text-muted); margin-right: auto;">Export Report:</span>
+        <button class="export-btn" id="exportMdBtn">
+          <span>📝 Markdown</span>
+        </button>
+        <button class="export-btn" id="exportJsonBtn">
+          <span>📋 JSON</span>
+        </button>
+        <button class="export-btn" id="copySummaryBtn">
+          <span>🔗 Copy Summary</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modular ES6 Application Entrypoint -->
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

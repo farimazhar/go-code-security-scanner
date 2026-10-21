@@ -1,0 +1,67 @@
+/* Badges */
+.badge-capsule {
+  font-size: var(--text-xs);
+  padding: 0.25rem 0.65rem;
+  background: #f5f3ff;
+  border: 1px solid #ddd6fe;
+  color: var(--primary);
+  border-radius: 9999px;
+  font-weight: 600;
+}
+
+/* Action Buttons */
+.btn {
+  padding: 0.7rem 1.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  font-family: var(--font-ui);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--accent-cyan));
+  color: #fff;
+  box-shadow: 0 4px 14px var(--primary-glow);
+}
+
+.btn-primary:not(:disabled):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.35);
+}
+
+.btn-secondary {
+  background: #f8fafc;
+  color: var(--text-muted);
+  border: 1px solid var(--card-border);
+}
+
+.btn-secondary:hover {
+  background: #f1f5f9;
+  color: var(--text-main);
+  border-color: #cbd5e1;
+}
+
+/* Empty State Component */
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-muted);
+}
+
+.empty-state-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  display: block;
+}
