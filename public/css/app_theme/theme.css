@@ -1,0 +1,18 @@
+/**
+ * Master App Theme & Stylesheet
+ * Feature-First Architecture aggregation
+ */
+
+/* 1. App Theme Layer (Design Tokens & Typography) */
+@import "./colors.css";
+@import "./typography.css";
+
+/* 2. Common Layer (Resets, Grids, and Shared Components) */
+@import "../common/base.css";
+@import "../common/layout.css";
+@import "../common/components.css";
+
+/* 3. Feature Layers */
+@import "../features/scanner/scanner.css";
+@import "../features/diagnostics/diagnostics.css";
+@import "../features/export/export.css";

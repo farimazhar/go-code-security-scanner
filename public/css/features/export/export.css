@@ -1,0 +1,32 @@
+/* Feature: Export & Report Actions */
+.export-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--card-border);
+}
+
+.export-btn {
+  background: #f8fafc;
+  border: 1px solid var(--card-border);
+  color: #475569;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.2s ease;
+  font-family: var(--font-ui);
+  font-weight: 500;
+}
+
+.export-btn:hover {
+  background: #f5f3ff;
+  border-color: #ddd6fe;
+  color: var(--primary);
+  transform: translateY(-1px);
+}

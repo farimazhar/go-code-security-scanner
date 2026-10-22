@@ -1,0 +1,46 @@
+:root {
+  /* Surfaces & Backgrounds - Clean Modern White Theme */
+  --bg-dark: #f8fafc;
+  --bg-deep: #ffffff;
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --card-border-hover: rgba(124, 58, 237, 0.4);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+
+  /* Brand Accents - Vibrant Royal Purple & Fuchsia (No generic blue) */
+  --primary: #7c3aed;
+  --primary-hover: #6d28d9;
+  --primary-glow: rgba(124, 58, 237, 0.25);
+  --accent-cyan: #d946ef;
+  --accent-glow: rgba(217, 70, 239, 0.2);
+
+  /* Severity / Status Colors - Crisp High-Contrast Light Badges */
+  --critical: #dc2626;
+  --critical-bg: #fef2f2;
+  --critical-border: #fecaca;
+  --critical-text: #b91c1c;
+
+  --high: #ea580c;
+  --high-bg: #fff7ed;
+  --high-border: #fed7aa;
+  --high-text: #c2410c;
+
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --medium-border: #fde68a;
+  --medium-text: #b45309;
+
+  --safe: #059669;
+  --safe-bg: #ecfdf5;
+  --safe-border: #a7f3d0;
+  --safe-text: #047857;
+
+  /* Typography Colors */
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --text-subtle: #94a3b8;
+  --code-text: #0f172a;
+}
